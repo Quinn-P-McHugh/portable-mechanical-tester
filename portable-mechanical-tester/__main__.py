@@ -1,8 +1,11 @@
-"""
-Prof Instruments - Portable Mechanical Tester
-Last Updated: December 15th, 2018
+"""Module containing code to start and control the portable mechanical tester.
 
-Written By:
+Uses Google Python Style Guide: https://google.github.io/styleguide/pyguide.html
+
+Prof Instruments - Portable Mechanical Tester
+Last Updated: January 8th, 2018
+
+Authors:
 Quinn McHugh
 Ridwan Alaoudian
 Tyler Bursa
