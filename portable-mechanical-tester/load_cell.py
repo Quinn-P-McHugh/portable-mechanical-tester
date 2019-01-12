@@ -5,7 +5,7 @@ Original Source Code: https://github.com/dcrystalj/HX711py3, comes with Apache 2
 Uses Google Python Style Guide: https://google.github.io/styleguide/pyguide.html
 """
 
-import load_cell_amplifier
+from load_cell_amplifier import LoadCellAmplifier
 import statistics
 
 class LoadCell:

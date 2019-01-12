@@ -3,9 +3,9 @@
 Uses Google Python Style Guide: https://google.github.io/styleguide/pyguide.html
 """
 
+from enum import Enum
 import RPi.GPIO as GPIO
 import time
-from enum import Enum
 
 class RotaryEncoder:
     """Represents a AMT102 rotary encoder from CUI Inc. used to keep track of

@@ -5,8 +5,8 @@ Uses Google Python Style Guide: https://google.github.io/styleguide/pyguide.html
 
 from enum import Enum
 import RPi.GPIO as GPIO
-import time
 import threading
+import time
 
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)

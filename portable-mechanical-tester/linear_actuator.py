@@ -3,7 +3,6 @@
 Uses Google Python Style Guide: https://google.github.io/styleguide/pyguide.html
 """
 
-import motor
 import RPi.GPIO as GPIO
 
 GPIO.setwarnings(False)
