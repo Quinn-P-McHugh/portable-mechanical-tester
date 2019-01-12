@@ -24,16 +24,16 @@ import multiprocessing
 # Initialize objects
 motor = Motor(20, 21)
 linear_actuator = LinearActuator(motor)
-rotary_encoder = RotaryEncoder(24, 18, 23)
-load_cell_amplifier = LoadCellAmplifier(9, 11)
+rotary_encoder = RotaryEncoder(9, 11, 10)
+load_cell_amplifier = LoadCellAmplifier(5, 6)
 load_cell = LoadCell(load_cell_amplifier)
 
 # Initialize buttons
-up_button = Button(3, linear_actuator.move_up)
-down_button = Button(4, linear_actuator.move_down)
+up_button = Button(27, linear_actuator.move_up)
+down_button = Button(17, linear_actuator.move_down)
 stop_button = Button(2, linear_actuator.stop)
-inc_speed_button = Button(6, linear_actuator.increase_speed)
-dec_speed_button = Button(5, linear_actuator.decrease_speed)
+inc_speed_button = Button(7, linear_actuator.increase_speed)
+dec_speed_button = Button(3, linear_actuator.decrease_speed)
 
 # Initialize limit switches
 bottom_limit_switch = Button(19, linear_actuator.stop)
