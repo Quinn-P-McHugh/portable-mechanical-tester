@@ -16,6 +16,7 @@ from button import Button
 from limit_switch import LimitSwitch
 from linear_actuator import LinearActuator
 from load_cell_amplifier import LoadCellAmplifier
+from load_cell import LoadCell
 from motor import Motor
 from rotary_encoder import RotaryEncoder
 
@@ -26,7 +27,7 @@ motor = Motor(20, 21)
 linear_actuator = LinearActuator(motor)
 rotary_encoder = RotaryEncoder(24, 18, 23)
 load_cell_amplifier = LoadCellAmplifier(9, 11)
-load_cell = LoadCell
+load_cell = LoadCell(load_cell_amplifier)
 
 # Initialize buttons
 up_button = Button(3, linear_actuator.move_up)
@@ -40,5 +41,5 @@ bottom_limit_switch = LimitSwitch(17, linear_actuator.stop)
 top_limit_switch = LimitSwitch(27, linear_actuator.stop)
 
 # Run load cell and rotary encoder in separate processes
-multiprocessing.Process(target=load_cell_amplifier.run).start()
+multiprocessing.Process(target=load_cell.run).start()
 multiprocessing.Process(target=rotary_encoder.run).start()
