@@ -13,7 +13,6 @@ Tyler Bursa
 
 # Import classes
 from button import Button
-from limit_switch import LimitSwitch
 from linear_actuator import LinearActuator
 from load_cell_amplifier import LoadCellAmplifier
 from load_cell import LoadCell
@@ -37,8 +36,8 @@ inc_speed_button = Button(6, linear_actuator.increase_speed)
 dec_speed_button = Button(5, linear_actuator.decrease_speed)
 
 # Initialize limit switches
-bottom_limit_switch = LimitSwitch(17, linear_actuator.stop)
-top_limit_switch = LimitSwitch(27, linear_actuator.stop)
+bottom_limit_switch = Button(19, linear_actuator.stop)
+top_limit_switch = Button(26, linear_actuator.stop)
 
 # Run load cell and rotary encoder in separate processes
 multiprocessing.Process(target=load_cell.run).start()
