@@ -5,7 +5,7 @@ Uses Google Python Style Guide: https://google.github.io/styleguide/pyguide.html
 
 from enum import Enum
 import RPi.GPIO as GPIO
-from time import sleep
+import time
 import threading
 
 GPIO.setwarnings(False)
@@ -89,9 +89,9 @@ class Motor:
         """
         while (self.enabled):
             GPIO.output(self.PIN_PUL, 1)
-            sleep(2/self.speed)
+            time.sleep(2/self.speed)
             GPIO.output(self.PIN_PUL, 0)
-            sleep(2/self.speed)
+            time.sleep(2/self.speed)
 
     def disable(self):
         """Disables the motor and updates its 'enabled' state."""

@@ -12,12 +12,13 @@ Tyler Bursa
 """
 
 # Import classes
-from motor import *
-from linear_actuator import *
-from button import *
-from load_cell_amplifier import *
-from rotary_encoder import *
-from limit_switch import *
+from button import Button
+from limit_switch import LimitSwitch
+from linear_actuator import LinearActuator
+from load_cell_amplifier import LoadCellAmplifier
+from motor import Motor
+from rotary_encoder import RotaryEncoder
+
 import multiprocessing
 
 # Initialize objects
@@ -25,6 +26,7 @@ motor = Motor(20, 21)
 linear_actuator = LinearActuator(motor)
 rotary_encoder = RotaryEncoder(24, 18, 23)
 load_cell_amplifier = LoadCellAmplifier(9, 11)
+load_cell = LoadCell
 
 # Initialize buttons
 up_button = Button(3, linear_actuator.move_up)

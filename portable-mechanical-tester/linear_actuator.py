@@ -3,9 +3,8 @@
 Uses Google Python Style Guide: https://google.github.io/styleguide/pyguide.html
 """
 
+import motor
 import RPi.GPIO as GPIO
-from time import sleep
-from motor import *
 
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)

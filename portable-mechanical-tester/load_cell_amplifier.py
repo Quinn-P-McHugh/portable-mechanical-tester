@@ -6,8 +6,8 @@ Uses Google Python Style Guide: https://google.github.io/styleguide/pyguide.html
 """
 
 import RPi.GPIO as GPIO
-import time
 import statistics
+import time
 
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
@@ -58,19 +58,6 @@ class LoadCellAmplifier:
         self.tare()
 
         self.enabled = True
-
-    def run(self):
-        """Calculates the force applied onto the load cell and outputs
-        it the console.
-        """
-        self.enabled = True
-        while (self.enabled):
-            weight = self.get_weight()
-            print("Load Cell Reading: " + "{0: 4.4f}".format(weight))
-
-    def stop(self):
-        """Stops the load cell from outputting values to the console."""
-        self.enabled = False
 
     def isReady(self):
         return GPIO.input(self.PIN_DAT) == 0
