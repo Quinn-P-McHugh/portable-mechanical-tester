@@ -14,7 +14,7 @@ class LinearActuator:
     Attributes:
         MOTOR: The Motor object that actuates the linear actuator.
         speed: An integer representing the speed of the motor [mm/s].
-        SCREW_LEAD: AN integer specifying the linear distance that the linear
+        SCREW_LEAD: An integer specifying the linear distance that the linear
             actuator carriage travels per revolution of the lead screw.
             Lead for the SFU1605 ball screw is 5mm:
             (Page 4) https://www.linearmodul.dk/Filer/PDF-Kataloger/PDF-Katalog%20Ballscrews.pdf
